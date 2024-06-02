@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://wh3wr717o36e"]
+
+[ext_resource type="Script" path="res://Scenes/predator.gd" id="1_5p3xf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_jyyww"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7f7pq"]
+size = Vector2(1, 1)
+
+[node name="Predator" type="RigidBody2D"]
+gravity_scale = 1.66533e-16
+script = ExtResource("1_5p3xf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.796078, 0.0823529, 0, 1)
+scale = Vector2(40, 40)
+texture = SubResource("CanvasTexture_jyyww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.19209e-07)
+scale = Vector2(40, 40)
+shape = SubResource("RectangleShape2D_7f7pq")

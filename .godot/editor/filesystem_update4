@@ -1,0 +1,6 @@
+res://Scenes/main.tscn
+res://Scenes/arena.tscn
+res://Scenes/prey.tscn
+res://Scenes/predator.tscn
+res://Scenes/debug_object.tscn
+res://Scenes/prey.gd

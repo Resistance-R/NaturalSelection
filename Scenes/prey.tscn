@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxmahih8cpr4i"]
+
+[ext_resource type="Script" path="res://Scenes/prey.gd" id="1_ydxvf"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_mqbm8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mf42k"]
+size = Vector2(1, 1)
+
+[node name="Prey" type="RigidBody2D"]
+gravity_scale = 1.66533e-16
+script = ExtResource("1_ydxvf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+scale = Vector2(40, 40)
+texture = SubResource("CanvasTexture_mqbm8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.19209e-07)
+scale = Vector2(40, 40)
+shape = SubResource("RectangleShape2D_mf42k")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

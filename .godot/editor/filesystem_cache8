@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1717387352
+icon.svg::CompressedTexture2D::5113005388149895985::1717372117::1717372117::1::::<><>::
+::res://Scenes/::1717387288
+arena.tscn::PackedScene::4821373619382443424::1717387288::0::1::::<><>::
+debug_object.tscn::PackedScene::625435546697196722::1717387288::0::1::::<><>::
+main.tscn::PackedScene::2056877625717246187::1717387288::0::1::::<><>::uid://caxrk345pn63u::::res://Scenes/arena.tscn<>uid://bxmahih8cpr4i::::res://Scenes/prey.tscn<>uid://wh3wr717o36e::::res://Scenes/predator.tscn
+predator.gd::GDScript::-1::1717382705::0::1::::<>RigidBody2D<>::
+predator.tscn::PackedScene::1560345511133860802::1717387288::0::1::::<><>::res://Scenes/predator.gd
+prey.gd::GDScript::-1::1717387125::0::1::::<>RigidBody2D<>::
+prey.tscn::PackedScene::4025549553476981406::1717387288::0::1::::<><>::res://Scenes/prey.gd
