@@ -9,6 +9,8 @@ size = Vector2(1, 1)
 
 [node name="Prey" type="RigidBody2D"]
 gravity_scale = 1.66533e-16
+max_contacts_reported = 30
+contact_monitor = true
 script = ExtResource("1_ydxvf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

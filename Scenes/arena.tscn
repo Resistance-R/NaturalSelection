@@ -1,13 +1,13 @@
 [gd_scene load_steps=7 format=3 uid="uid://caxrk345pn63u"]
 
+[ext_resource type="Script" path="res://Scenes/Walls.gd" id="1_nva34"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_geqvm"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_f15j5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q3605"]
 size = Vector2(0.98, 1.02)
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c2d0c"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_17tf7"]
 specular_color = Color(0, 0, 0, 1)
@@ -33,74 +33,79 @@ texture = SubResource("CanvasTexture_f15j5")
 shape = SubResource("RectangleShape2D_q3605")
 
 [node name="Walls" type="Node2D" parent="."]
+script = ExtResource("1_nva34")
 
 [node name="Upper" type="RigidBody2D" parent="Walls"]
 position = Vector2(0, -240)
-physics_material_override = SubResource("PhysicsMaterial_c2d0c")
 gravity_scale = 1.66533e-16
+max_contacts_reported = 30
+contact_monitor = true
 
 [node name="Upper" type="Sprite2D" parent="Walls/Upper"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
 z_index = 1
-scale = Vector2(1500, 20)
+scale = Vector2(1000, 20)
 texture = SubResource("CanvasTexture_17tf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Upper"]
 z_index = 1
 position = Vector2(-4.673e-08, 0)
-scale = Vector2(300, 450)
+scale = Vector2(200, 450)
 shape = SubResource("RectangleShape2D_sc3p2")
 
 [node name="Lower" type="RigidBody2D" parent="Walls"]
 z_index = 1
 position = Vector2(2.08165e-12, 240)
-physics_material_override = SubResource("PhysicsMaterial_c2d0c")
 gravity_scale = 1.66533e-16
+max_contacts_reported = 30
+contact_monitor = true
 
 [node name="Upper" type="Sprite2D" parent="Walls/Lower"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
 z_index = 1
-scale = Vector2(1500, 20)
+scale = Vector2(1000, 20)
 texture = SubResource("CanvasTexture_17tf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Lower"]
 z_index = 1
 position = Vector2(-4.673e-08, 0)
-scale = Vector2(300, 450)
+scale = Vector2(200, 450)
 shape = SubResource("RectangleShape2D_sc3p2")
 
 [node name="Left" type="RigidBody2D" parent="Walls"]
 position = Vector2(-490, 1.52588e-05)
 rotation = 1.5708
-physics_material_override = SubResource("PhysicsMaterial_c2d0c")
 gravity_scale = 1.66533e-16
+max_contacts_reported = 30
+contact_monitor = true
 
 [node name="Left" type="Sprite2D" parent="Walls/Left"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
 z_index = 1
-scale = Vector2(1000, 20)
+scale = Vector2(500, 20)
 texture = SubResource("CanvasTexture_17tf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Left"]
 z_index = 1
 position = Vector2(-4.673e-08, 0)
-scale = Vector2(200, 450)
+scale = Vector2(100, 450)
 shape = SubResource("RectangleShape2D_sc3p2")
 
 [node name="Right" type="RigidBody2D" parent="Walls"]
 position = Vector2(490, 2.08165e-12)
 rotation = 1.5708
-physics_material_override = SubResource("PhysicsMaterial_c2d0c")
 gravity_scale = 1.66533e-16
+max_contacts_reported = 30
+contact_monitor = true
 
 [node name="Left" type="Sprite2D" parent="Walls/Right"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
 z_index = 1
-scale = Vector2(1000, 20)
+scale = Vector2(500, 20)
 texture = SubResource("CanvasTexture_17tf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Right"]
 z_index = 1
 position = Vector2(-4.673e-08, 0)
-scale = Vector2(200, 450)
+scale = Vector2(100, 450)
 shape = SubResource("RectangleShape2D_sc3p2")

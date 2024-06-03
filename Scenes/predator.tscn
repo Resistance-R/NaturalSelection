@@ -9,6 +9,8 @@ size = Vector2(1, 1)
 
 [node name="Predator" type="RigidBody2D"]
 gravity_scale = 1.66533e-16
+max_contacts_reported = 30
+contact_monitor = true
 script = ExtResource("1_5p3xf")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -20,3 +22,5 @@ texture = SubResource("CanvasTexture_jyyww")
 position = Vector2(0, 1.19209e-07)
 scale = Vector2(40, 40)
 shape = SubResource("RectangleShape2D_7f7pq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
