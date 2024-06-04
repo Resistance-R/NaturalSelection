@@ -9,7 +9,6 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Arena" parent="." instance=ExtResource("1_e1y6f")]
-scale = Vector2(1.16, 1.32)
 
 [node name="Preys" type="Node2D" parent="."]
 
@@ -17,7 +16,7 @@ scale = Vector2(1.16, 1.32)
 position = Vector2(-182, 0)
 
 [node name="Prey2" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(25, 219)
+position = Vector2(42, 160)
 
 [node name="Prey3" parent="Preys" instance=ExtResource("2_ptk18")]
 position = Vector2(-342, -185)
@@ -55,4 +54,4 @@ position = Vector2(-391, -11)
 position = Vector2(-181, 178)
 
 [node name="Predator5" parent="Predators" instance=ExtResource("3_qmq0c")]
-position = Vector2(345, 243)
+position = Vector2(398, 156)

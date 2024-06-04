@@ -22,7 +22,7 @@ scale = Vector2(1000, 500)
 texture = SubResource("CanvasTexture_geqvm")
 
 [node name="SafeZone" type="Area2D" parent="."]
-scale = Vector2(50, 50)
+scale = Vector2(100, 100)
 
 [node name="SafeZone" type="Sprite2D" parent="SafeZone"]
 modulate = Color(0, 0.854902, 0.509804, 0.482353)
@@ -35,11 +35,8 @@ shape = SubResource("RectangleShape2D_q3605")
 [node name="Walls" type="Node2D" parent="."]
 script = ExtResource("1_nva34")
 
-[node name="Upper" type="RigidBody2D" parent="Walls"]
+[node name="Upper" type="StaticBody2D" parent="Walls"]
 position = Vector2(0, -240)
-gravity_scale = 1.66533e-16
-max_contacts_reported = 30
-contact_monitor = true
 
 [node name="Upper" type="Sprite2D" parent="Walls/Upper"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
@@ -53,12 +50,9 @@ position = Vector2(-4.673e-08, 0)
 scale = Vector2(200, 450)
 shape = SubResource("RectangleShape2D_sc3p2")
 
-[node name="Lower" type="RigidBody2D" parent="Walls"]
+[node name="Lower" type="StaticBody2D" parent="Walls"]
 z_index = 1
 position = Vector2(2.08165e-12, 240)
-gravity_scale = 1.66533e-16
-max_contacts_reported = 30
-contact_monitor = true
 
 [node name="Upper" type="Sprite2D" parent="Walls/Lower"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
@@ -72,40 +66,34 @@ position = Vector2(-4.673e-08, 0)
 scale = Vector2(200, 450)
 shape = SubResource("RectangleShape2D_sc3p2")
 
-[node name="Left" type="RigidBody2D" parent="Walls"]
+[node name="Left" type="StaticBody2D" parent="Walls"]
 position = Vector2(-490, 1.52588e-05)
 rotation = 1.5708
-gravity_scale = 1.66533e-16
-max_contacts_reported = 30
-contact_monitor = true
 
 [node name="Left" type="Sprite2D" parent="Walls/Left"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
 z_index = 1
-scale = Vector2(500, 20)
+scale = Vector2(450, 20)
 texture = SubResource("CanvasTexture_17tf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Left"]
 z_index = 1
 position = Vector2(-4.673e-08, 0)
-scale = Vector2(100, 450)
+scale = Vector2(90, 450)
 shape = SubResource("RectangleShape2D_sc3p2")
 
-[node name="Right" type="RigidBody2D" parent="Walls"]
+[node name="Right" type="StaticBody2D" parent="Walls"]
 position = Vector2(490, 2.08165e-12)
 rotation = 1.5708
-gravity_scale = 1.66533e-16
-max_contacts_reported = 30
-contact_monitor = true
 
 [node name="Left" type="Sprite2D" parent="Walls/Right"]
 modulate = Color(0.548963, 0.548963, 0.548963, 1)
 z_index = 1
-scale = Vector2(500, 20)
+scale = Vector2(450, 20)
 texture = SubResource("CanvasTexture_17tf7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/Right"]
 z_index = 1
 position = Vector2(-4.673e-08, 0)
-scale = Vector2(100, 450)
+scale = Vector2(90, 450)
 shape = SubResource("RectangleShape2D_sc3p2")

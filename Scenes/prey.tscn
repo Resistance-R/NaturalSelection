@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxmahih8cpr4i"]
+[gd_scene load_steps=5 format=3 uid="uid://bxmahih8cpr4i"]
 
 [ext_resource type="Script" path="res://Scenes/prey.gd" id="1_ydxvf"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_k1qr2"]
+bounce = 1.0
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_mqbm8"]
 
@@ -8,8 +11,9 @@
 size = Vector2(1, 1)
 
 [node name="Prey" type="RigidBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_k1qr2")
 gravity_scale = 1.66533e-16
-max_contacts_reported = 30
+max_contacts_reported = 60
 contact_monitor = true
 script = ExtResource("1_ydxvf")
 

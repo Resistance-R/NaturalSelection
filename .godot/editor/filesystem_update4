@@ -5,4 +5,4 @@ res://Scenes/predator.tscn
 res://Scenes/debug_object.tscn
 res://Scenes/prey.gd
 res://Scenes/predator.gd
-res://Scenes/Walls.gd
+res://Scenes/spawn.gd
