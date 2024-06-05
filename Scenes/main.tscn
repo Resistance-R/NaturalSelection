@@ -13,31 +13,19 @@
 [node name="Preys" type="Node2D" parent="."]
 
 [node name="Prey" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(-182, 0)
+position = Vector2(-327, 62)
 
 [node name="Prey2" parent="Preys" instance=ExtResource("2_ptk18")]
 position = Vector2(42, 160)
-
-[node name="Prey3" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(-342, -185)
-
-[node name="Prey4" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(-433, 153)
-
-[node name="Prey5" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(268, 119)
-
-[node name="Prey6" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(334, -186)
 
 [node name="Prey7" parent="Preys" instance=ExtResource("2_ptk18")]
 position = Vector2(168, -94)
 
 [node name="Prey8" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(-52, 47)
+position = Vector2(-18, 33)
 
 [node name="Prey9" parent="Preys" instance=ExtResource("2_ptk18")]
-position = Vector2(8, -69)
+position = Vector2(23, -66)
 
 [node name="Predators" type="Node2D" parent="."]
 
@@ -48,7 +36,7 @@ position = Vector2(0, -184)
 position = Vector2(336, -6)
 
 [node name="Predator3" parent="Predators" instance=ExtResource("3_qmq0c")]
-position = Vector2(-391, -11)
+position = Vector2(-403, -155)
 
 [node name="Predator4" parent="Predators" instance=ExtResource("3_qmq0c")]
 position = Vector2(-181, 178)

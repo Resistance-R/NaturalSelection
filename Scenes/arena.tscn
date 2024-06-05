@@ -1,8 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://caxrk345pn63u"]
+[gd_scene load_steps=10 format=3 uid="uid://caxrk345pn63u"]
 
+[ext_resource type="Script" path="res://Scenes/SafeZone.gd" id="1_hnoem"]
 [ext_resource type="Script" path="res://Scenes/Walls.gd" id="1_nva34"]
+[ext_resource type="Script" path="res://Scenes/Outside.gd" id="1_rqorh"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_geqvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yjhk7"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_f15j5"]
 
@@ -21,8 +25,32 @@ size = Vector2(5, 0.0500002)
 scale = Vector2(1000, 500)
 texture = SubResource("CanvasTexture_geqvm")
 
+[node name="Outside" type="Area2D" parent="."]
+script = ExtResource("1_rqorh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Outside"]
+position = Vector2(1000, 50)
+scale = Vector2(50, 130)
+shape = SubResource("RectangleShape2D_yjhk7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Outside"]
+position = Vector2(-1000, 50)
+scale = Vector2(50, 130)
+shape = SubResource("RectangleShape2D_yjhk7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Outside"]
+position = Vector2(2.08165e-12, 750)
+scale = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_yjhk7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Outside"]
+position = Vector2(2.08165e-12, -750)
+scale = Vector2(50, 50)
+shape = SubResource("RectangleShape2D_yjhk7")
+
 [node name="SafeZone" type="Area2D" parent="."]
-scale = Vector2(100, 100)
+scale = Vector2(150, 150)
+script = ExtResource("1_hnoem")
 
 [node name="SafeZone" type="Sprite2D" parent="SafeZone"]
 modulate = Color(0, 0.854902, 0.509804, 0.482353)
@@ -97,3 +125,7 @@ z_index = 1
 position = Vector2(-4.673e-08, 0)
 scale = Vector2(90, 450)
 shape = SubResource("RectangleShape2D_sc3p2")
+
+[connection signal="body_entered" from="Outside" to="Outside" method="_on_body_entered"]
+[connection signal="body_entered" from="SafeZone" to="SafeZone" method="_on_body_entered"]
+[connection signal="body_exited" from="SafeZone" to="SafeZone" method="_on_body_exited"]
