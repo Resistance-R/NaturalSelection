@@ -3,8 +3,3 @@ res://Scenes/arena.tscn
 res://Scenes/prey.tscn
 res://Scenes/predator.tscn
 res://Scenes/debug_object.tscn
-res://Scenes/SafeZone.gd
-res://Scenes/prey.gd
-res://Scenes/Outside.gd
-res://Scenes/predator.gd
-res://Scenes/PreysCharacteristics.gd

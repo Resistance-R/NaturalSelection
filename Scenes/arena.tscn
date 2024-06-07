@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://caxrk345pn63u"]
+[gd_scene load_steps=9 format=3 uid="uid://caxrk345pn63u"]
 
 [ext_resource type="Script" path="res://Scenes/SafeZone.gd" id="1_hnoem"]
-[ext_resource type="Script" path="res://Scenes/Walls.gd" id="1_nva34"]
 [ext_resource type="Script" path="res://Scenes/Outside.gd" id="1_rqorh"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_geqvm"]
@@ -61,7 +60,6 @@ texture = SubResource("CanvasTexture_f15j5")
 shape = SubResource("RectangleShape2D_q3605")
 
 [node name="Walls" type="Node2D" parent="."]
-script = ExtResource("1_nva34")
 
 [node name="Upper" type="StaticBody2D" parent="Walls"]
 position = Vector2(0, -240)

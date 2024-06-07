@@ -43,3 +43,15 @@ position = Vector2(-181, 178)
 
 [node name="Predator5" parent="Predators" instance=ExtResource("3_qmq0c")]
 position = Vector2(398, 156)
+
+[node name="Predator6" parent="Predators" instance=ExtResource("3_qmq0c")]
+position = Vector2(-439, 195)
+
+[node name="Predator7" parent="Predators" instance=ExtResource("3_qmq0c")]
+position = Vector2(351, -168)
+
+[node name="Predator8" parent="Predators" instance=ExtResource("3_qmq0c")]
+position = Vector2(-182, -127)
+
+[node name="Predator9" parent="Predators" instance=ExtResource("3_qmq0c")]
+position = Vector2(231, 146)
